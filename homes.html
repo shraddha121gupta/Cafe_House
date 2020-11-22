@@ -1,0 +1,69 @@
+<html>
+<head>
+{% load static %}
+    <style>
+ .body{
+        background:url({% static 'menu.jpg' %})center/cover fixed no-repeat;
+min-height: 80vh;}
+    </style>
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+<div class="all">
+    <header>
+        <div class="search">
+            <form>
+            <input type="search" name="s" placeholder="search food...">
+                <input type="submit" value=">">
+                   </form>
+        </div>
+        <nav class="navigation"><!-- navigation bar -->
+            <ul>
+                <li><a href="#">HOME</a></li>
+                 <li><a href="#bottom">ABOUT</a></li>
+                 <li><a href="http://127.0.0.1:8000/menu/">MENU</a></li>
+                <li><a href="http://127.0.0.1:8000/Deals/">DEALS OF THE DAY</a></li>
+                 <li><a href="http://127.0.0.1:8000/location">LOCATION</a></li>
+                 <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav><!-- navigation bar -->
+    </header>
+ <h1> <center style="color:blue;font-wight:bold;"> Welcome to Cafe-House</center></h1>
+  <!--banner-->  <section class="image cycle-slideshow">
+        <img src="{% static 'maggi.jpg' %}">
+        <img src="{% static 'menulist.jpg' %}">
+         <img src="{% static 'cafe.jpg' %}">
+
+
+    </section><!--banner-->
+    <section class="content"><!--content -->
+        <article>
+            <main>
+                <h1>Covid Measures</h1>
+               <p> team members and restaurant owners very seriously. Over the last few weeks,
+                   we have been closely monitoring the evolving health situation and have been
+                   working tirelessly to ensure that we are keeping your interests
+                   at the heart of every decision we make and everything we do.
+                </p>
+
+
+                <a href="#top">home</a>
+            </main>
+        </article>
+        <aside>
+            <div>
+                <h3>
+                    <a href="#">2018</a>
+                     <a href="#">2018</a>
+                     <a href="#">2018</a>
+                     <a href="#">2018</a>
+                </h3>
+            </div>
+        </aside>
+    </section>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+.menu-img{
+ background:url({% static 'menu.jpg' %})center/cover fixed no-repeat;
+min-height: 80vh;
+
+}
+.menu-text{
+min-height: 2vh;
+align-items:center;
+
+colums:black;
+padding: 40px 0px;
+}
+.menu_text{
+width: 90%;
+margin: 0 auto;
+}
+.obj_image{
+height:100px;
+width:100px;
+border-radius:50px;
+padding: 2px 0px;
+}
+
+    </style>
+</head>
+<body style=" background:url({% static 'menu.jpg' %})center/cover fixed no-repeat;">
+<section class="menu">
+    <center>
+    <article class="menu-img">
+       <article class="menu-text">
+           <div class="menu_text">
+
+              <marquee><h1 style="font-size: 40px;text-transform:uppercase;margin-bottom:0px"> Choose Your Own Food</h1></marquee>
+               <p >
+                   {% for i in food %}
+               <a href="{% url 'list' i.id %}">  <h2 style="color:black; font-weight:bold;">{{i.name}}</h2> </a>
+               <img src="{{i.image.url}}" class="obj_image"><p style="color:black;font-weight:bold;margin-bottom:50px;">Starting From Rs{{i.price}} </p>
+                      {% endfor %}
+
+               </p>
+               <a href="#"> Explore</a>
+           </div>
+       </article>
+
+    </article>
+        </center>
+</section>
+<section id="icons">
+    <a href="#"> <i class="fab fa-facebook-square"></i>
+  </a>
+     <a href="#"> <i class="fab fa-twitter-square"></i>
+  </a>
+     <a href="#"> <i class="fab fa-facebook-square"></i>
+  </a>
+     <a href="#"> <i class="fab fa-facebook-square"></i>
+  </a>
+
+</section>
+</body>
+</html>
